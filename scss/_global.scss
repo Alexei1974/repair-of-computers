@@ -1,0 +1,398 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+// :focus,
+// :active {
+//   outline: transparent;
+// }
+
+// a:focus,
+// a:active {
+//   outline: transparent;
+// }
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: 0;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  position: relative;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+// ------------------------//
+
+body {
+  background-color: $bg-color;
+  font-family: $fonts;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  color: $text-color;
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.container-fluid {
+  max-width: 1950px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  font-family: "mont-m";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.01em;
+  display: inline-block;
+  color: #ffffff;
+  background-color: $accent;
+  padding: 18px 30px;
+  border-radius: 15px;
+  transition: opacity 0.3s ease-in-out;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.title-decor {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/intro/arrows.svg);
+    right: -2px;
+    top: 29px;
+    width: 89px;
+    height: 13px;
+  }
+}
+
+.title {
+  font-family: "bebas-m";
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 84px;
+  color: $dark-color;
+}
+.slick-next,
+.slick-prev {
+  position: absolute;
+  z-index: 5;
+  background-color: transparent;
+  &:hover {
+    opacity: 0.8;
+  }
+  &.slick-disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+.slick-dots {
+  text-align: center;
+  margin-top: 15px;
+
+  li {
+    display: inline-block;
+    margin: 7px;
+    button {
+      font-size: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $text-color;
+      opacity: 0.3;
+      transition: opacity 0.5s ease-out;
+      transition: border-color 0.5s ease-out;
+      &:hover {
+        border: 2px solid $accent;
+        opacity: 0.5;
+      }
+    }
+    &.slick-active button {
+      background-color: transparent;
+      border: 2px solid $accent;
+      opacity: 1;
+    }
+  }
+}
+form input {
+  border: 1px solid #dadada;
+  box-sizing: border-box;
+  border-radius: 15px;
+  height: 64px;
+  background-color: transparent;
+  padding: 0 10px;
+  color: #000;
+  display: block;
+  width: 100%;
+  &::placeholder {
+    font-family: "mont-m";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+
+.header.out {
+  box-shadow: 0px 5px 20px #cddae1;
+}
+.about__info span {
+  display: none;
+}
+
+.dn {
+  display: none !important;
+}
+
+#back2Top {
+  width: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  z-index: 12;
+  display: none;
+  cursor: pointer;
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  position: fixed;
+  bottom: 50px;
+  right: 15px;
+  background-color: $accent;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: none;
+}
+#back2Top:hover {
+  background-color: #ddf;
+  color: #000;
+}
+/* MODAL */
+.modal {
+  position: relative;
+  z-index: 1000000;
+  input {
+    margin-top: 20px;
+  }
+}
+.modal__container {
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+}
+
+.modal__overlay,
+.modal__overlay-alert,
+.modal__overlay-slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal__container {
+  background-color: #fff;
+  padding: 30px;
+  max-width: 500px;
+  max-height: 100vh;
+  border-radius: 20px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  position: relative;
+}
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.micromodal-slide {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+}
+.micromodal-slide.is-open {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.7s ease-in-out;
+}
+.modal__title {
+  font-family: "bebas-m";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #13171d;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  letter-spacing: 0.4px;
+  span {
+    color: $accent;
+  }
+}
+
+.modal__close {
+  opacity: 0.4;
+  transition: 3s;
+  position: absolute;
+  top: -35px;
+  width: 24px;
+  height: 24px;
+  z-index: 40;
+  top: 12px;
+  right: 12px;
+  background-color: transparent;
+  &::before {
+    content: "x";
+    font-size: 30px;
+  }
+}
+.modal__close:hover {
+  opacity: 1;
+}
+.modal__footer {
+  padding: 10px 0;
+  text-align: center;
+  button {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+.modal-alert {
+  text-align: center;
+  .modal__header {
+    flex-direction: column;
+    justify-content: start;
+  }
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 30px;
+  }
+}
+input.error {
+  border-color: $accent;
+}
+label.error {
+  color: $accent;
+  display: block;
+  margin-bottom: 10px;
+}
+input.valid {
+  border-color: #24be24;
+}
+
+body.losk {
+  overflow: hidden;
+}
+video {
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
