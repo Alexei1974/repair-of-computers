@@ -43,11 +43,11 @@
     line-height: 17px;
     display: block;
   }
-   &__lokation{
-     transition: opacity .5 ease-out;
-   &:hover{
-     opacity: .8;
-   }
+  &__lokation {
+    transition: opacity 0.5 ease-out;
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   &__lokation-link {
@@ -70,10 +70,10 @@
     line-height: 19px;
     letter-spacing: -0.01em;
     color: $dark-color;
-     transition: color .5 ease-out;
-    &:hover{
-     color: $accent;
-   }
+    transition: color 0.5 ease-out;
+    &:hover {
+      color: $accent;
+    }
   }
 
   &__tel-icon {
@@ -642,7 +642,7 @@
     border-radius: 20px;
     overflow: hidden;
     display: block;
-    video{
+    video {
       width: 100%;
       height: 100%;
     }
@@ -929,7 +929,7 @@ blockquote {
 
 .contacts {
   padding-top: 120px;
-  background: #E5E5E5;
+  background: #e5e5e5;
   &__box {
     border: 1px solid #c7d1d7;
     border-radius: 30px;
@@ -1038,9 +1038,9 @@ blockquote {
     }
   }
 }
-.contacts__input-box{
+.contacts__input-box {
   position: relative;
-  span{
+  span {
     position: absolute;
     display: inline-block;
     left: 15px;
@@ -1048,27 +1048,26 @@ blockquote {
     pointer-events: none;
   }
   input:focus,
-  input:active{
-    background-color:#E5E5E5;
-    
+  input:active {
+    background-color: #e5e5e5;
   }
-  input:focus+ span,
-  input.valid~ span,
-  input.error~ span{
+  input:focus + span,
+  input.valid ~ span,
+  input.error ~ span {
     top: -13px;
     left: 20px;
-   background: #E5E5E5;
+    background: #e5e5e5;
     padding: 0 8px;
     z-index: 5;
   }
-  input.valid:focus~ div{
+  input.valid:focus ~ div {
     position: absolute;
     bottom: -1px;
     left: 15px;
-   right: 15px;
-   height: 3px;
-   background-color: #24be24;
-   border-radius: 15px;
+    right: 15px;
+    height: 3px;
+    background-color: #24be24;
+    border-radius: 15px;
   }
 }
 
@@ -1092,41 +1091,39 @@ blockquote {
       display: block;
     }
   }
-
 }
-  .contacts__video-btn{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-    width: 120px;
-    height: 120px;
+.contacts__video-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 120px;
+  height: 120px;
+}
+.contacts__video-pause {
+  background-color: #fff;
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  z-index: 7;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  display: none;
+}
+.contacts__video.btn-pause-active {
+  .contacts__video-pause {
+    display: block;
   }
-  .contacts__video-pause{
-   background-color: #fff;
-    height: 56px;
-   width: 56px;
-   border-radius: 50%;
-   background-repeat: no-repeat;
-   z-index: 7;
-   position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: 5;
-    display: none;
-}
-.contacts__video.btn-pause-active{
-   .contacts__video-pause{
-     display: block;
-   }
-
 }
 
-.contacts__video-img.hide{
+.contacts__video-img.hide {
   display: none;
 }
 
@@ -1136,9 +1133,8 @@ blockquote {
   &__inner {
     min-height: 758px;
     position: relative;
-   
   }
-  picture{
+  picture {
     position: absolute;
     left: 0;
     top: 0;
@@ -1147,14 +1143,14 @@ blockquote {
     width: 100%;
     height: 100%;
   }
-  &__bg{
+  &__bg {
     height: 100%;
     width: 100%;
     object-fit: cover;
   }
 
   &__contacts {
-     z-index: 5;
+    z-index: 5;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
@@ -1168,7 +1164,7 @@ blockquote {
     width: 100%;
     padding: 40px 30px;
     position: relative;
-    top: -150px;
+    top: -130px;
   }
 
   &__tel-wrapp {
@@ -1323,27 +1319,27 @@ blockquote {
 }
 
 .contacts__box-form input {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 input.error {
-    border-color: #e2001a;
+  border-color: #e2001a;
 }
 form input {
-    border: 1px solid #dadada;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    border-radius: 15px;
-    height: 64px;
-    background-color: transparent;
-    padding: 0 10px;
-    color: #000;
-    display: block;
-    width: 100%;
+  border: 1px solid #dadada;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 15px;
+  height: 64px;
+  background-color: transparent;
+  padding: 0 10px;
+  color: #000;
+  display: block;
+  width: 100%;
 }
-input, button, textarea {
-    font-family: inherit;
+input,
+button,
+textarea {
+  font-family: inherit;
 }
-
-
 
 @import "media";

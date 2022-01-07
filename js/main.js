@@ -3,12 +3,12 @@
 
 $(function () {
 
- 
 
-        var lazyLoadInstance = new LazyLoad({
-            elements_selector: ".lazy"
-        });
-  
+
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy"
+    });
+
     /* Прокручивает страницу вверх при нажатии на кнопку */
     $(window).scroll(function () {
         var height = $(window).scrollTop();
@@ -422,30 +422,37 @@ $(function () {
         ]
     });
 
+    // ===================================//
 
-
-    $('.feedback__btn').on('click', function () {
+    $(".feedback__btn").on("click", function () {
         $(this).hide();
-        $('video').each(function () {
+        $(this).next('.feedback__item video').each(function () {
             $(this)[0].play();
-            console.log(123)
+            $(this).next('picture').hide();
+
         });
-        $('video').on("play", function () {
-            this.controls = true;
-        });
-        $(this).next('picture').hide();
+    });
+    
+
+    $(".feedback__item video").on("click", function () {
+        $(this)[0].pause();
+       
     });
 
-    $("video").on("ended", function () {
-        $('.feedback__item picture').show();
-        $(this).controls = false;
+    $(".feedback__item video").on("pause", function () {
+        $('.feedback__item .contacts__video-pause').show();
+    });
+
+    
+
+
+    $(".feedback__item video").on("ended", function () {
+        $(this).next('.feedback__item picture').show();
         $('.feedback__btn').show();
         // $(this).reload();
-
     });
 
-    var videos = document.querySelectorAll("video");
-
+    var videos = document.querySelectorAll(".feedback__item video");
     for (var i = 0; i < videos.length; i++) {
         videos[i].onplay = function (e) {
             for (var j = 0; j < videos.length; j++) {
@@ -480,7 +487,7 @@ $(function () {
         $('.contacts__video-btn').show();
 
     });
-  
+
 
 });
 
