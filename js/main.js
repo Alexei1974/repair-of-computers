@@ -436,15 +436,8 @@ $(function () {
 
     $(".feedback__item video").on("click", function () {
         $(this)[0].pause();
-       
+        $(".feedback__btn").show();
     });
-
-    $(".feedback__item video").on("pause", function () {
-        $('.feedback__item .contacts__video-pause').show();
-    });
-
-    
-
 
     $(".feedback__item video").on("ended", function () {
         $(this).next('.feedback__item picture').show();
